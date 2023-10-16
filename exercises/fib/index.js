@@ -24,4 +24,28 @@ function fib(n) {
   return second;
 }
 
+// function memoization(fn) {
+//   const cache = {};
+//
+//   return function (...args) {
+//     if (cache[args]) {
+//       return cache[args];
+//     }
+//
+//     cache[args] = fn.apply(this, args);
+//
+//     return cache[args];
+//   }
+// }
+//
+// function slowFib(n) {
+//   if (n < 2) {
+//     return n;
+//   }
+//
+//   return fib(n - 1) + fib(n - 2);
+// }
+//
+// const fib = memoization(slowFib);
+
 module.exports = fib;
