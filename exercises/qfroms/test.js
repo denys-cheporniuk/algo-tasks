@@ -39,3 +39,19 @@ test('peek returns, but does not remove, the first value', () => {
   expect(q.remove()).toEqual(1);
   expect(q.remove()).toEqual(2);
 });
+
+test('should add and remove values correctly', () => {
+  const q = new Queue();
+  q.add(1);
+  q.add(2);
+  expect(q.peek()).toEqual(1);
+  expect(q.peek()).toEqual(1);
+  q.add(3);
+  expect(q.remove()).toEqual(1);
+  q.add(4);
+  expect(q.remove()).toEqual(2);
+  expect(q.peek()).toEqual(3);
+  expect(q.remove()).toEqual(3);
+  expect(q.remove()).toEqual(4);
+  expect(q.remove()).toEqual(undefined);
+});
