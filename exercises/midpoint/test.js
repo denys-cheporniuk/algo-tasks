@@ -44,3 +44,10 @@ describe('Midpoint returns the middle node of an even numbered list', () => {
     expect(midpoint(l).data).toEqual('b');
   });
 });
+
+describe('Midpoint returns the null for empty list', () => {
+  test('when the list is empty', () => {
+    const l = new LinkedList();
+    expect(midpoint(l)).toEqual(null);
+  })
+})

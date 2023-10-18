@@ -13,9 +13,15 @@
 //   midpoint(l); // returns { data: 'b' }
 
 function midpoint(list) {
-  const middle = Math.round(list.size() / 2)
+  let slowForward = list.getFirst();
+  let fastForward = list.getFirst();
 
-  return list.getAt(middle - 1);
+  while (fastForward && fastForward.next && fastForward.next.next) {
+    fastForward = fastForward.next.next;
+    slowForward = slowForward.next;
+  }
+
+  return slowForward;
 }
 
 module.exports = midpoint;
