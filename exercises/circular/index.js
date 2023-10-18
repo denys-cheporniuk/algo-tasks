@@ -21,7 +21,7 @@ function circular(list) {
     fastForward = fastForward.next.next;
 
     if (slowForward === fastForward) {
-      return true
+      return true;
     }
   }
 
