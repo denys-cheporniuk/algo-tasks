@@ -12,6 +12,10 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+function midpoint(list) {
+  const middle = Math.round(list.size() / 2)
+
+  return list.getAt(middle - 1);
+}
 
 module.exports = midpoint;
