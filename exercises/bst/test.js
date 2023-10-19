@@ -39,3 +39,4 @@ test('Contains returns null if value not found', () => {
 
   expect(node.contains(9999)).toEqual(null);
 });
+
